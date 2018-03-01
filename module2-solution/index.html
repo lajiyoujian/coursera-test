@@ -1,9 +1,172 @@
 <!DOCTYPE html>
 <html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
-	<title>Hello Coursera!</title>
+	<title>Coursera Module2 solution</title>
 </head>
+
+<style type="text/css">
+
+* {
+ box-sizing: border-box; 
+margin: 0;
+ padding: 0;
+}
+
+/********** Base styles **********/
+
+h1 {
+margin-bottom: 15px;
+text-align: center;
+}
+
+body{
+	background-color: yellow;
+	padding: 10px;
+}
+
+p {
+
+width: 90%;
+height: 80px;
+margin-right: auto;
+margin-left: auto;
+clear: right;
+font-family: Helvetica;
+color: white;
+}
+
+.row {
+width: 100%;
+}
+
+#d1,#d2{
+	margin-bottom: 1%;
+}
+
+/********** Large devices only **********/
+
+@media (min-width: 992px) {
+
+
+.col-lg-4 {
+float: left;
+
+border: 1px solid black;	
+
+width: 31.33%;
+
+margin:  1%;
+}
+
+}
+
+
+/********** Medium devices only **********/
+
+@media (min-width: 768px) and (max-width: 991px) {
+ 
+.col-md-6 {
+float: left;
+
+border: 1px solid black;	
+
+width: 48%;
+
+margin: 1%;
+
+}
+
+.col-md-12 {
+float: left;
+
+border: 1px solid green;	
+
+width: 98%;
+
+margin: 1%
+
+
+}
+
+}
+
+#d1{
+	background-color: pink;
+
+}
+#t1{
+	text-align: center;
+	height: 20px;
+	width: 100px;
+	margin-bottom: 15px;
+	position: relative;
+	float: right;
+	border: 1px solid black;
+	background-color: green;
+}
+
+
+#d2{
+	background-color: red;
+}
+
+#t2{
+	text-align: center;
+	height: 20px;
+	width: 100px;
+	margin-bottom: 15px;
+	position: relative;
+	float: right;
+	border: 1px solid black;
+	background-color: pink;
+}
+
+
+#d3{
+	background-color: green;
+}
+#t3{
+	text-align: center;
+	height: 20px;
+	width: 100px;
+	margin-bottom: 15px;
+	position: relative;
+	float: right;
+	border: 1px solid black;
+	background-color: red;
+}
+
+</style>
+
+
+
+<h1> Our Menu</h1>
+
+
 <body>
-<h1> my1st page. test2</h1>	
+
+
+<div class="row">
+
+<div id="d1" class="col-lg-4 col-md-6">
+	<div id="t1">chicken</div>
+	<p>Chicken: lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+</div>
+
+
+<div id="d2" class="col-lg-4 col-md-6">
+	<div id="t2">beef</div>
+	<p>Beef: lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem lorem</p>
+</div>
+
+
+<div id="d3" class="col-lg-4 col-md-12">
+	<div id="t3">sushi</div>	
+	<p>Sushi: lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+</div>
+
+
 </body>
 </html>
