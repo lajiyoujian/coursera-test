@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+	<title>Coursera Module2 solution</title>
+</head>
+
+<style type="text/css">
+
+* {
+ box-sizing: border-box;  /*设置box的边框包含 border的 1px */
+ margin: 0;		/* 清除系统默认设置的 边框和边距 */
+ padding: 0;  /* 覆盖系统默认设置的 边框和边距 */
+}
+
+/********** Base styles （最小窗口屏幕状态) **********/
+
+h1 {
+margin-bottom: 15px;
+text-align: center;
+}
+
+body{
+	background-color: yellow;
+	padding: 0px;
+}
+
+p {
+
+width: 90%;
+height: 80px;
+margin-right: auto;
+margin-left: auto;
+clear: right;   /*设置 文字段落 box 的上下位置是相对 在右侧顶部的小box的（图标名称box）下边框， 如果相对左侧顶部大box上边框 会出现文字和小box相互覆盖 */
+font-family: Helvetica;
+font-size: 100%;
+color: white;
+}
+
+.row {
+width: 98%;
+margin: 0  1% 0 1%;    /*上下左右边距 各1% ， 左右如果重叠 只算最大的 ，上下相加 1%+1% =2%  */
+}
+
+#d1,#d2,#d3{
+	margin: 0 1% 2% 1%;  /* 设定最小屏幕时， 三个box 竖直摆放时边距  因为左右各有 padding 0.5% , 所以上下设为2% */
+}
+
+/********** Large devices only **********/
+
+@media (min-width: 992px) {  /*如果窗口屏幕超过992px*/
+
+p{
+	font-size: 175%;  /*不同屏幕尺寸下 字体大小不同*/
+	overflow: auto;   /*如果文字过长 超出div box， 用scroll bar*/
+}
+
+.col-lg-4 {
+float: left;  /*靠左边框 浮动 重置 box  */
+
+border: 1px solid black;	
+
+width: 31.33%;   /* 三个box 各 33.33% - 1% 左边距 - 1% 右边据 = 31.33% 每个box */
+
+	}
+
+}
+
+
+/********** Medium devices only **********/
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+p{
+	font-size: 125%;
+}
+
+.col-md-6 {
+float: left;
+
+border: 1px solid black;	
+
+width: 48%;  /* 2个box 各 50% - 1% 左边距 - 1% 右边据 = 48% 每个box */
+
+
+
+}
+
+.col-md-12 {
+float: left;
+
+border: 1px solid green;	
+
+width: 98%;  /* 1个box 100% - 1% 左边距 - 1% 右边据 = 98% */
+
+}
+
+}
+
+#d1{
+	background-color: pink;
+
+}
+#t1{
+	text-align: center;  
+	height: 20px;
+	width: 100px;
+	margin-bottom: 15px;
+	position: relative;  /* 小box 的位移相是相对大box， 而非全屏幕  */
+	float: right;		/* 设置box 右上角小box (图标名称box)  右对齐大box边框 */
+	border: 1px solid black;
+	background-color: green;
+}
+
+
+#d2{
+	background-color: red;
+}
+
+#t2{
+	text-align: center;
+	height: 20px;
+	width: 100px;
+	margin-bottom: 15px;
+	position: relative;
+	float: right;
+	border: 1px solid black;
+	background-color: pink;
+}
+
+
+#d3{
+	background-color: green;
+}
+#t3{
+	text-align: center;
+	height: 20px;
+	width: 100px;
+	margin-bottom: 15px;
+	position: relative;
+	float: right;
+	border: 1px solid black;
+	background-color: red;
+}
+
+</style>
+
+
+
+<h1> Our Menu</h1>
+
+
+<body>
+
+
+<div class="row">
+
+
+<div id="d1" class="col-lg-4 col-md-6">  
+	<div id="t1">chicken</div>
+	<p>Chicken: lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+</div>
+
+
+<div id="d2" class="col-lg-4 col-md-6">
+	<div id="t2">beef</div>
+	<p>Beef: lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem lorem</p>
+</div>
+
+
+<div id="d3" class="col-lg-4 col-md-12">
+	<div id="t3">sushi</div>	
+	<p>Sushi: lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+</div>
+
+
+</body>
+</html>
